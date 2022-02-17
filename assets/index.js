@@ -27,23 +27,22 @@ function transitionText() {
         if(letters.length > 0){
             document.querySelector('.transitionText').innerHTML += letters.shift()
         }
-        else {
+    else {
 
-        }
+    }
 
-
-}
 }
 
 
+// Nav bar buttons
 const listAside = document.querySelector('.list')
 const navBar = document.querySelector('aside')
 listAside.addEventListener('click',clickList)
 function clickList() {
     navBar.style.cssText = "display:flex;"
     listAside.style.cssText = "display:none;"
-
 }
+
 const close = document.querySelector('.close')
 close.addEventListener('click',closeList)
 function closeList() {
@@ -59,36 +58,84 @@ function homeSection() {
         behavior:"smooth"
     })
 }
-const firstSection = document.querySelectorAll('.sectionOne')
-firstSection.addEventListener('click',firstSectionBtn)
-function firstSectionBtn() {
+const mercurySection = document.querySelector('.mercury')
+mercurySection.addEventListener('click',mercurySectionBtn)
+function mercurySectionBtn() {
     window.scrollTo({
-        top:1900,
+        top:1800,
         left:0,
         behavior:"smooth"
     })
 
 }
-const secondSection = document.querySelectorAll('.sectionTwo')
-secondSection.addEventListener('click',secondSectionBtn)
-function secondSectionBtn() {
+const venusSection = document.querySelector('.venus')
+venusSection.addEventListener('click',venusSectionBtn)
+function venusSectionBtn() {
+    window.scrollTo({
+        top:2100,
+        left:0,
+        behavior:"smooth"
+    })
+
+}
+
+const earthSection = document.querySelector('.earth')
+earthSection.addEventListener('click',earthSectionBtn)
+function earthSectionBtn() {
     window.scrollTo({
         top:2400,
         left:0,
         behavior:"smooth"
     })
 }
-const thirdSection = document.querySelectorAll('.sectionThree')
-thirdSection.addEventListener('click',thirdSectionBtn)
-function thirdSectionBtn() {
+const marsSection = document.querySelector('.mars')
+marsSection.addEventListener('click',marsSectionBtn)
+function marsSectionBtn() {
     window.scrollTo({
-        top:3400,
+        top:2600,
         left:0,
         behavior:"smooth"
     })
 }
+const jupiterSection = document.querySelector('.jupiter')
+jupiterSection.addEventListener('click',jupiterSectionBtn) 
+function jupiterSectionBtn() {
+    window.scrollTo({
+        top:2900,
+        left:0,
+        behavior:"smooth"
+    })
 
+}
+const saturnSection = document.querySelector('.saturn')
+saturnSection.addEventListener('click',saturnSectionBtn)
+function saturnSectionBtn() {
+    window.scrollTo({
+        top:3200,
+        left:0,
+        behavior:"smooth"
+    })
+}
+const uranusSection = document.querySelector('.uranus')
+uranusSection.addEventListener('click',uranusSectionBtn)
+function uranusSectionBtn() {
+window.scrollTo({
+    top:3400,
+    left:0,
+    behavior:"smooth"
+})
 
+}
+const neptuneSection = document.querySelector('.neptune')
+neptuneSection.addEventListener('click',neptuneSectionBtn)
+function neptuneSectionBtn() {
+window.scrollTo({
+    top:3400,
+    left:0,
+    behavior:"smooth"
+})
+}
+}
 
 setInterval(transitionText,5000)
 window.addEventListener('scroll',transitionText)
